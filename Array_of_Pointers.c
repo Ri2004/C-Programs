@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int highestMarks(int **ptr, int *size, int n)
+int highestMarks(int **ptr, int *size1, int n)
 {
     int max = 0, i, j;
     for (i = 0; i < n; i++)
     {
-        for (j = 0; j < size[i]; j++)
-            if (max < ptr[i][j])
+        for (j = 0; j < size1[i]; j++)      //size1 = size, so, size1[0] = size[0] = 6
+            if (max < ptr[i][j])           //ptr = p, so, ptr[0] = p[0] = a, ptr[0][0] = p[0][0] = a[0] = 25
                 max = ptr[i][j];
     }
     return max;
