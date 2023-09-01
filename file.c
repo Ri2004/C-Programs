@@ -14,10 +14,10 @@ int main()
 
     // For Writing and Appending File
     char string[200];
-    printf("\n");
+    printf("Enter A String\n");
     gets(string);
     ptr = fopen("myfile1.txt", "w");
-    fprintf(ptr,"The String I want to write in file is: %s", string);
+    fprintf(ptr,"%s", string);
     fclose(ptr);
     return 0;
 }
