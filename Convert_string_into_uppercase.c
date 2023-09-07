@@ -19,6 +19,6 @@ int main()
             s[i] = s[i] - 32;
         }
     }
-    printf("After convert into lowercase the string is %s\n", s);
+    printf("After convert into uppercase the string is %s\n", s);
     return 0;
 }
