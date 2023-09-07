@@ -8,9 +8,9 @@ int main()
     printf("Enter A Number\n");
     scanf("%d",&b);
 
-    for (int i = 1; i<=a && i<=b; i++) {
+    for (int i = 1; i<=a && i<=b; i++) 
+    {
 
-        ("%d",i);
         if(a%i==0 && b%i==0)
         {
             hcf = i;
