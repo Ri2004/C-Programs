@@ -15,9 +15,8 @@ void multiplication_table(int n)
 }
 int main()
 {
-    int a,n;
-    a = multiplication_table(n);
-    printf("%d",a);
+    int n;
+    multiplication_table(n);
     
     return 0;
 }
