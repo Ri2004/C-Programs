@@ -1,5 +1,6 @@
-// Add an element at given position in array
+// Add an element at front in array
 // for insert an element in array we must create an array which is not full i.e. number of elements must be less than the size of array
+
 
 #include <stdio.h>
 int main()
@@ -9,7 +10,7 @@ int main()
     scanf("%d", &n);
 
     printf("Enter array elements\n");
-    for (i = 0; i < (n - 5); i++)
+    for (i = 0; i < (n - 5); i++)  
     {
         scanf("%d", &arr[i]);
     }
@@ -24,7 +25,7 @@ int main()
     printf("\nEnter the value which you want to insert in array\n");
     scanf("%d", &num);
 
-    for (j = i; j > pos; j--)
+    for (j = i; j > 0; j--)
     {
         arr[j] = arr[j - 1];
     }
