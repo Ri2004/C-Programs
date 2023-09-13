@@ -2,7 +2,7 @@
 #include<stdio.h>
 int main()
 {
-    int matrix[100][100], n, i, j, sum_of_rows, sum_of_cols;
+    int matrix[100][100], n, i, j, sum_of_rows, sum_of_cols, grand_total = 0;
 
     printf("Enter Size of Matrix\n");
     scanf("%d", &n);
@@ -36,10 +36,12 @@ int main()
         {
             sum_of_rows += matrix[i][j];
             sum_of_cols += matrix[j][i];
+            grand_total += matrix[i][j] + matrix[j][i];
         }
         printf("Sum of %dth row is: %d\n", i + 1, sum_of_rows);
         printf("Sum of %dth column is: %d\n", i + 1, sum_of_cols);
     }
+    printf("The addition of whole matrix is: %d\n", grand_total);
 
     return 0;
 }
