@@ -26,7 +26,7 @@ int main()
         }
 
         num = arr[0];
-        for (j = 0; j < n; j++)
+        for (j = 0; j < n - 1; j++)  // in this line j goes to n-1, n=10, when inserting elements then i     goes to less than n, i.e. n=9, so at deletion if j goes to less than 9 then when j = 9 then arr[9] = arr[10], and after left shifiting I decrement the size - 1, so arr[10] is garbage value.
         {
             arr[j] = arr[j + 1];
         }
