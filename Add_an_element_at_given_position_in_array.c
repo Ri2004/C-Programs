@@ -8,31 +8,39 @@ int main()
     printf("Enter size of array\n");
     scanf("%d", &n);
 
-    printf("Enter array elements\n");
-    for (i = 0; i < (n - 5); i++)
+    if (n > 50)
     {
-        scanf("%d", &arr[i]);
+        printf("Overflow Condition.\n");
     }
-    printf("The array is\n");
-    for (i = 0; i < (n - 5); i++)
+    else
     {
-        printf("%d ", arr[i]);
+        printf("Enter array elements\n");
+        for (i = 0; i < n; i++)
+        {
+            scanf("%d", &arr[i]);
+        }
+        printf("The array is\n");
+        for (i = 0; i < n; i++)
+        {
+            printf("%d ", arr[i]);
+        }
+
+        printf("\nEnter the value which you want to insert in array\n");
+        scanf("%d", &num);
+
+        for (j = n; j > pos; j--)
+        {
+            arr[j] = arr[j - 1];
+        }
+        arr[j] = num;
+        n++;
+
+        printf("After add %d element in array\n", num);
+        for (j = 0; j < n; j++)
+        {
+            printf("%d ", arr[j]);
+        }
     }
 
-    for (i = 0; arr[i] != 0; i++);
-
-    printf("\nEnter the value which you want to insert in array\n");
-    scanf("%d", &num);
-
-    for (j = i; j > pos; j--)
-    {
-        arr[j] = arr[j - 1];
-    }
-    arr[j] = num;
-    printf("After add %d element in array\n", num);
-    for (j = 0; arr[j] != 0; j++)
-    {
-        printf("%d ", arr[j]);
-    }
     return 0;
 }
