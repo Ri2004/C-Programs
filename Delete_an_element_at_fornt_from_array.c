@@ -3,7 +3,7 @@
 #include<stdio.h>
 int main()
 {
-    int arr[50] = {0}, n, i, j, num;
+    int arr[50], n, i, j, num;
     printf("Enter size of array\n");
     scanf("%d", &n);
 
@@ -28,8 +28,8 @@ int main()
     for (i = 0; arr[i] != 0; i++);
 
     printf("\nAfter delete the %d at front from array\n", num);
-
-    for (j = 0; j < i; j++)
+    n--;
+    for (j = 0; j < n; j++)
     {
         printf("%d ", arr[j]);
     }
