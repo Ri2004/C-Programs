@@ -25,8 +25,6 @@ int main()
         arr[j] = arr[j + 1];
     }
 
-    for (i = 0; arr[i] != 0; i++);
-
     printf("\nAfter delete the %d at front from array\n", num);
     n--;
     for (j = 0; j < n; j++)
