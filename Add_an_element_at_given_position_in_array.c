@@ -4,9 +4,12 @@
 #include <stdio.h>
 int main()
 {
-    int arr[50], n, i, num, j, pos = 4;
+    int arr[50], n, i, num, j, pos;
     printf("Enter size of array\n");
     scanf("%d", &n);
+
+    printf("Enter the position at which you insert an element\n");
+    scanf("%d", &pos);
 
     if (n > 50)
     {
@@ -28,7 +31,7 @@ int main()
         printf("\nEnter the value which you want to insert in array\n");
         scanf("%d", &num);
 
-        for (j = n; j > pos; j--)
+        for (j = n; j > pos - 1; j--)
         {
             arr[j] = arr[j - 1];
         }
