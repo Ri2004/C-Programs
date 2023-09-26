@@ -38,29 +38,24 @@ void printSpellingOfDigit(int digit)
 }
 int main()
 {
-    int num = 0, n, rev, rem, temp;
+    int num = 0, n, temp;
     printf("Enter a Number\n");
     scanf("%d", &n);
 
     temp = n;
     while (temp > 0)
     {
-        if (temp % 10 == 0)
-        {
-            rev = temp % 10;
-        }
         num = (num * 10) + (temp % 10);
         temp /= 10;
     }
     while (num > 0)
     {
-        rem = num % 10;
-        printSpellingOfDigit(rem);
+        printSpellingOfDigit(num % 10);
         num /= 10;
     }
     if (n % 10 == 0)
     {
-        printSpellingOfDigit(rev);
+        printSpellingOfDigit(n % 10);
     }
     return 0;
 }
