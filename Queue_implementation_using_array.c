@@ -1,3 +1,5 @@
+// Queue implementation using array
+
 #include<stdio.h>
 #define MAX 50
 int queue[MAX], front = -1, rear = -1;
