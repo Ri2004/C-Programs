@@ -1,3 +1,4 @@
+// Circular Queue implementation using array
 #include<stdio.h>
 #define MAX 5
 int circular_queue[MAX], front = -1, rear = -1;
