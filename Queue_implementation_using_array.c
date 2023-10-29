@@ -48,6 +48,11 @@ void dequeue()
     {
         printf("Queue is Empty\n");
     }
+    else if (front == rear)
+    {
+        queue[front] = 0;
+        front = rear = -1;
+    }
     else
     {
         printf("\nThe Dequeued element is: %d\n", queue[front]);
