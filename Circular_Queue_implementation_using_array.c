@@ -69,7 +69,7 @@ void display()
 {
     int i;
     printf("\nAfter enqueue and dequeue in queue the queue is\n");
-    for (i = front; i <= rear; i=(i+1%MAX))
+    for (i = front; i <= rear; i = (i + 1 % MAX))
     {
         printf("\n%d ", circular_queue[i]);
     }
