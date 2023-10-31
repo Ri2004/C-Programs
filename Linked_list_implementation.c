@@ -16,25 +16,19 @@ int main()
 
     while(n)
     {
-        printf("Enter choice between 0 and 1, 0 for not want to create any node and 1 for create another node\n");
-        scanf("%d", &n);
-
-        if (n == 0)
-            break;
+        newnode = (struct node *)malloc(sizeof(struct node));
+        printf("Enter the data\n");
+        scanf("%d", &newnode->data);
+        newnode->link = NULL;
+        if (head == NULL)
+            head = temp = newnode;
         else
         {
-            newnode = (struct node *)malloc(sizeof(struct node));
-            printf("Enter the data\n");
-            scanf("%d", &newnode->data);
-            newnode->link = NULL;
-            if (head == NULL)
-                head = temp = newnode;
-            else
-            {
-                temp->link = newnode;
-                temp = temp->link;
-            }
-        }    
+            temp->link = newnode;
+            temp = temp->link;
+        }
+        printf("Do You want to create another node, if yes press 1, else 0\n");
+        scanf("%d", &n);
     }
 
     temp = head;
