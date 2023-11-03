@@ -17,18 +17,25 @@ int main()
     while(n)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
-        printf("Enter the data\n");
-        scanf("%d", &newnode->data);
-        newnode->link = NULL;
-        if (head == NULL)
-            head = temp = newnode;
+        if(newnode==NULL)
+        {
+            printf("Memory Not allocate.");
+        }
         else
         {
-            temp->link = newnode;
-            temp = temp->link;
+            printf("Enter the data\n");
+            scanf("%d", &newnode->data);
+            newnode->link = NULL;
+            if (head == NULL)
+                head = temp = newnode;
+            else
+            {
+                temp->link = newnode;
+                temp = temp->link;
+            }
+            printf("Do You want to create another node, if yes press 1, else 0\n");
+            scanf("%d", &n);
         }
-        printf("Do You want to create another node, if yes press 1, else 0\n");
-        scanf("%d", &n);
     }
 
     temp = head;

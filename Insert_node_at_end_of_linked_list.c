@@ -1,6 +1,6 @@
-// Insert Node at End of Linked List 
-#include<stdio.h>
-#include<stdlib.h>
+// Insert Node at End of Linked List
+#include <stdio.h>
+#include <stdlib.h>
 
 struct node
 {
@@ -28,21 +28,28 @@ void create_linked_list()
     while (choice)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
-        printf("Enter data\n");
-        scanf("%d", &newnode->data);
-        newnode->link = NULL;
-
-        if (head == NULL)
+        if (newnode == NULL)
         {
-            head = temp = newnode;
+            printf("Memory Not allocate.");
         }
         else
         {
-            temp->link = newnode;
-            temp = temp->link;
+            printf("Enter data\n");
+            scanf("%d", &newnode->data);
+            newnode->link = NULL;
+
+            if (head == NULL)
+            {
+                head = temp = newnode;
+            }
+            else
+            {
+                temp->link = newnode;
+                temp = temp->link;
+            }
+            printf("Do You want to create another node, if yes press 1 else 0\n");
+            scanf("%d", &choice);
         }
-        printf("Do You want to create another node, if yes press 1 else 0\n");
-        scanf("%d", &choice);
     }
 }
 
@@ -59,7 +66,7 @@ void display_list()
 
 void insert_node_at_end()
 {
-    if(head == NULL)
+    if (head == NULL)
     {
         printf("Linked List is empty. No node is there.");
     }
