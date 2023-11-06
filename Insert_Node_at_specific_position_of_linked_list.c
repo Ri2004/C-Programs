@@ -29,7 +29,7 @@ int main()
 void create_linked_list()
 {
     int choice = 1;
-    while(choice)
+    while(choice == 1)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
         if(newnode==NULL)
@@ -82,17 +82,21 @@ void insert_node_at_specific_position()
     {
         temp = head;
         newnode = (struct node *)malloc(sizeof(struct node));
-        printf("Enter data of newly created node\n");
-        scanf("%d", &newnode->data);
-        newnode->link = NULL;
-
-        while (i < pos - 1)
+        if(newnode == NULL)
+            printf("Memory Not allocate for new node.");
+        else
         {
-            temp = temp->link;
-            i++;
+            printf("Enter data of newly created node\n");
+            scanf("%d", &newnode->data);
+            newnode->link = NULL;
+
+            while (i < pos - 1)
+            {
+                temp = temp->link;
+                i++;
+            }
+            newnode->link = temp->link;
+            temp->link = newnode;
         }
-        newnode->link = temp->link;
-        temp->link = newnode;
-    }
-    
+    } 
 }

@@ -26,7 +26,7 @@ int main()
 void create_linked_list()
 {
     int choice = 1;
-    while(choice)
+    while(choice == 1)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
         if(newnode==NULL)

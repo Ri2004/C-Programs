@@ -14,7 +14,7 @@ int main()
     struct node *newnode, *temp = NULL;
     int n = 1;
 
-    while(n)
+    while(n == 1)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
         if(newnode==NULL)
@@ -40,7 +40,7 @@ int main()
 
     temp = head;
     printf("\nAfter creation of Linked List the data of Linked List are\n");
-    while(temp!=0)
+    while(temp!=NULL)
     {
         printf("%d\n", temp->data);
         temp = temp->link;
