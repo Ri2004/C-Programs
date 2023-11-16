@@ -66,6 +66,7 @@ void display_list()
             printf("%d ", temp->data);
             temp = temp->next;
         }
+        printf("%d", temp->data);
     }
 }
 
